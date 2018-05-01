@@ -17,6 +17,7 @@ WORKDIR /root/qgoda/
 RUN cpanm URI::Escape
 
 RUN cpanm --installdeps .
+RUN cpanm Text::Markdown
 RUN cpanm -n .
 
 VOLUME /data
