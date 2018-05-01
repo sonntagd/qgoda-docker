@@ -13,11 +13,11 @@ RUN git clone https://github.com/gflohr/qgoda.git
 
 WORKDIR /root/qgoda/
 
-# URI::Escape is missing in dependecy list!
+# these modules are missing in dependecy list:
 RUN cpanm URI::Escape
+RUN cpanm Text::Markdown
 
 RUN cpanm --installdeps .
-RUN cpanm Text::Markdown
 RUN cpanm -n .
 
 VOLUME /data
